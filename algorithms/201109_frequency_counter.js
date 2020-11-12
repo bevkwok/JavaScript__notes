@@ -72,13 +72,14 @@ function validAnagram(str1, str2) {
     let CharOfStr1 = {};
     let CharOfStr2 = {};
 
-    for(let char in str1){
-        CharOfStr1[char] = (CharOfStr1[char] || 0) + 1;
-    }
+    for(var i = 0; i < str1.length; i++){
 
-    for(let char in str2){
-        CharOfStr2[char] = (CharOfStr2[char] || 0) + 1;
+        CharOfStr1[str1[i]] = (CharOfStr1[str1[i]] || 0) + 1;
+
+        CharOfStr2[str2[i]] = (CharOfStr2[str2[i]] || 0) + 1;
     }
+    console.log(CharOfStr1);
+    console.log(CharOfStr2);
 
     for(let key in CharOfStr1) {
         if(!(key in CharOfStr2)){
@@ -92,6 +93,9 @@ function validAnagram(str1, str2) {
     return true;
 }
 // console.log(validAnagram('anagrams', 'nagaamm'));
+console.log(validAnagram('aaz', 'zza'));
+
+
 
 // ******************** Challenge - Anagrams - KEY ********************
 function Anagrams(str1, str2) {
@@ -117,4 +121,4 @@ function Anagrams(str1, str2) {
     return true;
 }
 
-console.log(Anagrams('anagrams', 'anagrams'));
+// console.log(Anagrams('anagrams', 'anagrams'));
