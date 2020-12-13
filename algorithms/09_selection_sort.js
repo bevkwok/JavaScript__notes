@@ -1,6 +1,7 @@
 // *************** Selection Sort ******************************
 // Similar to bubble sort but it sorts the small value first
 // find the minimun in an array and swap
+// worst: O(N**2)   best: O(N**2)
 
 function selectionSort1(arr){
     for(var i = 0; i < arr.length; i++){

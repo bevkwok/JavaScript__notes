@@ -1,6 +1,7 @@
 //Sorting?
 //Definition : 
 //Rearrange the items in a collection so the items are in a certain order
+//worst: O(N**2)   best: O(N)
 
 // *************** Built-in JS sorting ***************
 //Do basic sorting with build in JS sort method
