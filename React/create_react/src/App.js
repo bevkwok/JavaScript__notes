@@ -1,6 +1,8 @@
 import './App.css';
 import React from 'react';
 import User from './components/User';
+import User2 from './components/User2';
+import UserForm from './components/UserForm';
 
 
 
@@ -30,9 +32,14 @@ function App() {
 
       <User firstName={ "Jane" } lastName="Doe" age={ 45 } hairColor="Black" />
 
-      <User firstName={ "John" } lastName="Smith" age={ 88 } hairColor="grey" />
+      <User firstName={ "John" } lastName="Smith" age={ 88 } 
+      hairColor="grey" />
 
-      <User firstName={ "Millard" } lastName="Fillmore" age={ 50 } hairColor="Brown" />
+      <User2 firstName={ "User2" } lastName="Functional" age={ 10 } hairColor="React" />
+
+      <User2 firstName={ "Millard" } lastName="Fillmore" age={ 50 } hairColor="Brown" />
+
+      <UserForm />
 
     </div>
   );
