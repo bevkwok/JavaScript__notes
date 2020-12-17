@@ -42,3 +42,27 @@ class StrongCharacter extends Character{
 const strongBen = new StrongCharacter("Strong Ben");
 strongBen.sayName();
 strongBen.speakWisdow();
+
+// about object
+// looping through an object doesn't mean they will return in the order you like
+// to get all value in order, have to put them into an array first
+
+let user = {
+    name: "bev",
+    email: "bev@gmail.com",
+    like: "105"
+}
+
+console.log(Object.values(user));
+console.log(Object.keys(user));
+//pulling out an array of keys
+//use it to loop over the object
+//is the best way to loop over an object
+
+let userKeys = Object.keys(user);
+console.log(userKeys);
+
+for(let value of userKeys){
+    console.log(value);
+    console.log(user[value]);
+}
