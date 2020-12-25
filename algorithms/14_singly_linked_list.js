@@ -72,7 +72,6 @@ class SinglyLinkedList {
 
         let oldHead = this.head;
         this.head = oldHead.next;
-        console.log(oldHead);
         this.length--;
         if(this.length === 0){
             this.tail = null;
@@ -154,14 +153,14 @@ class SinglyLinkedList {
 
     reverse(){
         if(!this.head) return undefined;
-        let theEnd = this.head;
-        let theStart = this.tail;
-        let next;
+        var newTail = this.head;
+        let node = newTail.next;
+        let next = node.next;
         let prev;
-        let index = this.length - 1;
-        while(index > 0){
-            
-        }
+        node.next = node;
+        node.next = node;
+
+    
 
     }
 }
