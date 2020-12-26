@@ -1,12 +1,20 @@
 import './App.css';
-import React from 'react';
+import React, { useState } from 'react';
 import User from './components/User';
 import User2 from './components/User2';
 import UserForm from './components/UserForm';
-
-
+import HookFormDisplay from './components/HookFormDisplay';
+import HookForm from './components/HookForm';
 
 function App() {
+
+  const [userInfo, setUserInfo] = useState({
+    firstName: "",
+    lastName: "",
+    age: "",
+    hairColor: ""
+  });
+
   return (
     <div className="App">
       <h1>Remember to import React from 'react' so you can use JSX</h1>
@@ -39,7 +47,12 @@ function App() {
 
       <User2 firstName={ "Millard" } lastName="Fillmore" age={ 50 } hairColor="Brown" />
 
-      <UserForm />
+      
+
+      <HookForm input={userInfo} setInput={setUserInfo}/>
+
+      <HookFormDisplay data={userInfo}/>
+
 
     </div>
   );
