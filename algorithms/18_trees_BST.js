@@ -53,12 +53,10 @@ class BinarySearchTree{
         this.root = null;
     }
 
-
     // insert
     // first, check if there is a root
     // create one if not, compare if yes
     // check if there is left and right
-
 
     insert(val){
         var newNode = new Node(val);
@@ -105,17 +103,12 @@ class BinarySearchTree{
 
 }
 
-var tree = new BinarySearchTree();
-tree.root = new Node(10);
-tree.insert(9);
-console.log(tree);
-
-tree.insert(5);
-console.log(tree);
-
-tree.insert(11);
-console.log(tree);
-
-console.log(tree.find(2));
+var newTree = new BinarySearchTree;
+console.log(newTree.insert(10));
+console.log(newTree.insert(6));
+console.log(newTree.insert(15));
+console.log(newTree.insert(3));
+console.log(newTree.insert(8));
+console.log(newTree.insert(20));
 
 
