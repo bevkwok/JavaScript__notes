@@ -10,11 +10,18 @@
 // - InOrder / PreOrder / PostOrder
 
 // When to use BFS
-// for keeping track of lots of nodes
+// when the tree is very deep, save space to use BFS
+// less in queue, and will be pop soon
+
 
 // When to use DFS
-// for keeping track of fewer nodes
+// when the tree is very wide, save more space to use DFS
 
+// Time complexity is same for both BFS and DFS
+
+// Use cases 
+// DFS - InOrder (with BST) smallest to largest
+// DFS - PreOrder (to export a tree) easily copied from left to right
 
 
 // BFS (Breadth-first Search)
