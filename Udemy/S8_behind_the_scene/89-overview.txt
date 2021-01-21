@@ -1,0 +1,42 @@
+Low level programming language:
+EX: C
+Developer has to manage resource manually
+
+High level programming language:
+EX: JavaScript and Python
+Developer does not have to worry, everything happens automatically
+
+What manage the memory in JavaScript?
+Garbage-collection algorithm
+
+The computer only understand 0 and 1
+How does it understand JS?
+the process of converting JS to machine code is called compiling. This process happen inside JS engine.
+
+-Multi-paradigm
+Paradigm: An approach and mindset of structuring code, which will direct your coding style and technique.
+1. Procedural programming
+2. Object-oriented programming(OOP)
+4. Functional programming(FP)
+
+-Prototype-based object-oriented
+Prototype: similar to template
+like when we make an array, the array inherits methods from the prototype
+
+-First-calss functions
+Functions are treated as variables
+Passing functions into other functions
+
+-Dynamically-typed
+No data type definitions
+Types becomes known at runtime
+
+-Single-threaded
+JavaScript can only do one thing at a time
+Concurrency model: The way JS engine handles multiple tasks happening at the same time.
+
+-Non-blocking event loop
+by using a event loop
+
+-Event loop
+takes long running tasks, executes them in the 'background', put back in main thread once they are finished

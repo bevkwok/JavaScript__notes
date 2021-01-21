@@ -1,0 +1,14 @@
+Compilation VS Interpretation
+
+Conpilation:
+convert all code into machine code at once
+written to binary file to be executed by computer
+
+Interpretation:
+Interpreter runs through the source code
+executes it line by line
+very slow so JS is not using it
+
+Just-in-time(JIT) compilation:
+convert all code into machine code at once
+then executed immediately
