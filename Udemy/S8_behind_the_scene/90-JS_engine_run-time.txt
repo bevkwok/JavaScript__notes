@@ -1,0 +1,42 @@
+JS engine = program that runs JS code
+example: Google V8(also run node.js)
+
+JS has 2 parts
+Call stack and Heap
+
+Call stack is where our code is executed, using execution context.
+Heap stored all objects
+
+JS uses JIT.
+Just-in-time(JIT) compilation:
+convert all code into machine code at once
+then executed immediately
+
+JS step-by-step JIT:
+
+1. Parsing(read code) 
+- code will be parse into a data structure called AST
+- check for syntax error
+2. Compilation
+- turn AST into machine code
+3. Execution (happens in Call Stack)
+
+Modern JS engine Optimization 
+- create unoptimized machine code in the beginning
+- it will keep optimizing and running in the background
+- That's why it can run JS really fast
+- This process happens in special threads, we can't access them
+
+JS runtime(like a box that contains everything to run JS):
+- In Browser
+1. have JS engine
+2. have WEB APIs(like functions for the engine)
+* those APIs are not a part of JS
+3. have Callback Queue( a data structure with all call back functions)
+* when a event happens, a call back function will be called
+* I. call back function got put into callback queue
+* II. when call stack is empyt, callback queue pass on the function in so the engine can executed the function.
+* Above process is called event loop (for non-blocking concurrency model)
+
+JS runtime In Node.js
+* no WEB APIS but C++ bindings & thread pool
