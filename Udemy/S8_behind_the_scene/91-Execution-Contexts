@@ -1,0 +1,29 @@
+After code finished compiling
+
+1. Creation of global execution context(for top-level code)
+top-level code = code that are outside of the function
+*function should only execute when they are called
+
+function name(){ } <  this is also top level, inside {} = not top level
+
+What is execution context(EC)?
+Basically is an environment in which a piece of JavaScript is executed. Stores all the necessary information for some code to be executed.
+EX: local variable, arguement
+
+One project only has one global EC, it created for code that is not inside any function
+
+2. Execution of top-level code(inside global EC)
+
+3. Execution of functions and waiting for callbacks
+- one EC per function and methods
+-  all the ECs together is basically the call stack
+
+What is inside EC?
+a. Variable environment
+- let, const, var, functions, arguments object
+
+b. Scope chain
+c. this keyword
+- this generated during "creating phase", right before execution
+
+** Arrow functions don't have arguements object and this keyword
