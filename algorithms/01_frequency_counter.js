@@ -5,7 +5,7 @@
 
 
 
-// O(N**2)
+// ******************** O(N**2) ********************
 function same(arr1, arr2) {
     if(arr1.length !== arr2.length) {
         return false;
@@ -26,7 +26,7 @@ function same(arr1, arr2) {
 
 
 
-// O(N)
+// ******************** O(N) ********************
 function same(arr1, arr2) {
     if(arr1.length !== arr2.length) {
         return false;
@@ -62,3 +62,63 @@ function same(arr1, arr2) {
 // console.log(same([2,1,4], [4,9,16]));
 // console.log(same([2,3], [4,9,16]));
 
+
+// ******************** Challenge - Anagrams ********************
+function validAnagram(str1, str2) {
+    if(str1.length !== str2.length) {
+        return false;
+    }
+
+    let CharOfStr1 = {};
+    let CharOfStr2 = {};
+
+    for(var i = 0; i < str1.length; i++){
+
+        CharOfStr1[str1[i]] = (CharOfStr1[str1[i]] || 0) + 1;
+
+        CharOfStr2[str2[i]] = (CharOfStr2[str2[i]] || 0) + 1;
+    }
+    console.log(CharOfStr1);
+    console.log(CharOfStr2);
+
+    for(let key in CharOfStr1) {
+        if(!(key in CharOfStr2)){
+            return false;
+        }
+
+        if(CharOfStr1[key] !== CharOfStr2[key]){
+            return false;
+        }
+    }
+    return true;
+}
+// console.log(validAnagram('anagrams', 'nagaamm'));
+console.log(validAnagram('aaz', 'zza'));
+
+
+
+// ******************** Challenge - Anagrams - KEY ********************
+function Anagrams(str1, str2) {
+    if(str1.length !== str2.length) {
+        return false;
+    }
+
+    var Str1CharList = {};
+
+    for(let char in str1) {
+        // if char is in Str1CharList + 1, if not create one
+        Str1CharList[char] ? Str1CharList[char] += 1 : Str1CharList[char] = 1;
+    }
+
+    for(let char in str2) {
+        if(!Str1CharList[char]) {
+            //if char is str2 are not in Str1CharList
+            return false;
+        } else {
+            Str1CharList[char] -= 1;
+        }
+    }
+    return true;
+}
+
+// console.log(Anagrams('anagrams', 'anagrams'));
