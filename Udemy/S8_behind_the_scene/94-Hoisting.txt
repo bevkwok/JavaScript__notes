@@ -1,0 +1,27 @@
+What is Hoisting?
+It makes some types of variables usable before they are actually declared
+(this is not true) * Variables lifted to the top of their scope 
+
+Hoisting (behind the scenes)
+Code is scanned for variable declaration before execution. 
+For each variable, a new property is created in the variable environment object.
+
+What is Hoisted?
+Function declaration (block scope) (actual function)
+Var variable (function scope) (undefined)
+
+*Not hoisted
+let and const (uninitialized, TDZ) (Block)
+
+*depends
+Function expressions and arrows (depends if using var or let/const)
+
+What is TDZ?
+Temporal Dead Zone
+Why use TDZ?
+Easier to avoid and catch errors
+Make const variable work correctly (can't start with undefined)
+
+Hoisting has a lot of problem, why still do it?
+More readable
+Var variable is a byproduct of hoisting

@@ -1,0 +1,12 @@
+This keyword:
+- it's a special variable that is created for every execution context (every function). It points to the "owner" of the function.
+- "this" is not static, changes depends the way you call the function. It's value will be assigned when the function is called
+
+In Method => this = the object where the method belongs
+this = points to the global object
+this (strict mode) = undefined
+In Arrow function => this = the parent function
+** Arrow function doesn't have it's own "this" **
+In Event listener => this = the DOM element with the listener
+
+** "this" never points to the function itself **
