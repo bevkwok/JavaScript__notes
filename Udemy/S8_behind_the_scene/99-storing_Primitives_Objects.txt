@@ -1,0 +1,28 @@
+Primities = number, string, bool, null, undefined
+Primities = Primities Types (In Memery)
+Primities Types (store in call stack, EC)
+
+Objects = array, object, function
+Objects = Reference Types (In Memery)
+Reference Types (store in Heap)
+
+Storing Primites value:
+1. JS will create unique identifier with varaiable name
+2. A piece of memory will be allocated with an address
+3. Value will be store in that address
+* the variable name points to the address, not the value *
+- let age = 30 point to the address where has the value 30 
+- age = oldAge => oldAge also point at the address(30)
+- reassign a value to age => age = 31
+* The value of a certain memory address is immutable
+- so a new piece of memory is created to store 31 with a new address
+- and age will point to the new address with value 31
+
+Storing Reference value:
+1. JS create a memory address with the value in HEAP
+2. identifier created in call stack that points to an address in the call stack, and it's value points to the memory address of HEA
+* becasue object maybe too large for a call stack
+* we can change const if it points to an object
+* because the value of in call stack doesn't change
+* it only changes the value in HEAP
+

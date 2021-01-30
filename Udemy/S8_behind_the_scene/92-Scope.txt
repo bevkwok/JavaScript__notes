@@ -1,0 +1,29 @@
+Each EC has it's own scope chain
+
+What is scope?
+The place where a variable is declared.
+There are global scope, function scope and block scope.
+
+What is scoping?
+it controlls how our program's variables are organized and accessed.
+
+What is Lexical scoping?
+Scoping is controlled by placement of functions and blocks in the code.
+
+What is scope of a variable?
+The Region of the code where a variable can be accessed.
+
+-- 3 Types of scope --
+
+- Global scope -
+outside of all function or block
+accessible everywhere
+
+- Functino scope -
+also called local scope
+accessible inside function only
+
+- Block scope - { everythin inside here}
+only applies to let and const variables
+accessiable only inside block
+Functions are block scoped
